@@ -174,6 +174,8 @@ public class App {
                 .eventMessageQueue(eventQueue);
         
         Client hosebirdClient = builder.build();
+        System.out.println(Constants.CURRENT_API_VERSION);
+        hosebirdClient.getEndpoint().setApiVersion(Constants.CURRENT_API_VERSION);
         hosebirdClient.connect();
         int c = 1;
         while(!hosebirdClient.isDone()){
