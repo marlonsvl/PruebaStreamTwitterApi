@@ -160,7 +160,7 @@ public class App {
         
         Hosts hosebirdHosts = new HttpHosts(Constants.STREAM_HOST);
         StatusesFilterEndpoint hosebirdEndpoint = new StatusesFilterEndpoint();
-        List<String> terms = Lists.newArrayList("IoT startups");
+        List<String> terms = Lists.newArrayList("#startups");
         hosebirdEndpoint.trackTerms(terms);
         
         Authentication hosebirdAuth = new OAuth1(consumerKey, consumerSecret, accessToken, accessSecret);   
